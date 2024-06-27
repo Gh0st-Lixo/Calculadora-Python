@@ -4,16 +4,16 @@ from time import time
 from colorama import Fore, Back, init
                      # Rodando o programa em loop, para não ter necessidade de ficar executando toda hora
 init ()
-while True:
-    
-    print ("""
+texto = """
 Calculadora 1.0
            
     Digite [ 1 ] para Somar
     Digite [ 2 ] para Dividir
     Digite [ 3 ] para subtrair
-    Digite [ 4 ] para Multiplicar\n""")
-                                       # Outro Loop caso o Usuario tenha errado
+    Digite [ 4 ] para Multiplicar\n"""
+while True:
+    
+    print (texto) # Outro Loop caso o Usuario tenha errado       
     while True:
                # Tratamento de erro e Variavel da escolha de operador matematico
         try:
@@ -22,13 +22,7 @@ Calculadora 1.0
                 print ("Digite um numero entre 1-4")
                 continue
         except ValueError:
-            print ("""
-Calculadora 1.0
-           
-    Digite [ 1 ] para Somar
-    Digite [ 2 ] para Dividir
-    Digite [ 3 ] para subtrair
-    Digite [ 4 ] para Multiplicar\n""")
+            print (texto)
             print ("Digite um numero entre 1-4")
             continue
                     # Tratamento de erro e 2 valores para serem calculados
